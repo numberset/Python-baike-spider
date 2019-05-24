@@ -1,4 +1,5 @@
 # 百度百科Python爬虫实例
+# https://www.imooc.com/learn/563
 # https://github.com/lovefengruoqing/baike_spider
 
 import url_manager, html_downloader, html_parser, html_parser
@@ -13,7 +14,7 @@ class SpiderMain(object):
 
     def craw(self, root_url):
         count = 1
-        self.urls.add_new_url(root_url):
+        self.urls.add_new_url(root_url)
         while self.urls.has_new_url():
             try:
                 new_url = self.urls.get_new_url()
