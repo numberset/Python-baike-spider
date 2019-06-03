@@ -1,22 +1,36 @@
 # 百度百科Python爬虫实例
+# https://www.imooc.com/learn/563
 # https://github.com/lovefengruoqing/baike_spider
 
 
 class UrlManager(object):
+    def __init__(self):
+        self.new_urls = set()
+        self.old_urls = set()
 
 
-    def add_new_url(self):
-        pass
 
+    def add_new_url(self, url):
+        if url is None:
+            return
+        if url not in self.new_urls and url not in self.old_urls:
+            self.new_urls.add(url)
 
     def has_new_url(self):
-        pass
+        return len(self.new_urls) != 0
 
 
     def get_new_url(self):
+        new_url = self.new_urls.pop()
+        self.old_urls.add(new_url)
+        return new_url
 
 
 
     def add_new_urls(self):
+        if urls is None or len(urls) == 0:
+            return
+        for url in urls:
+            self.urls.add_new_url(url)
 
         
