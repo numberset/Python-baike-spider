@@ -27,10 +27,10 @@ class UrlManager(object):
 
 
 
-    def add_new_urls(self):
+    def add_new_urls(self, urls):
         if urls is None or len(urls) == 0:
             return
         for url in urls:
-            self.urls.add_new_url(url)
+            self.add_new_url(url)
 
         
